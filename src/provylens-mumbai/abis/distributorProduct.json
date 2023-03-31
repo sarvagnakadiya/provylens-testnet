@@ -1,0 +1,248 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_dpId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address[]",
+        "name": "_manufacturerAddress",
+        "type": "address[]"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256[]",
+        "name": "_mdId",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_name",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_description",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "_unit",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "_price",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_date",
+        "type": "uint32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_expiryDate",
+        "type": "uint32"
+      }
+    ],
+    "name": "eventAddDistributorProduct",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_dpId",
+        "type": "uint256"
+      }
+    ],
+    "name": "eventDeleteDistributorProduct",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_dpId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "_quantity",
+        "type": "uint128"
+      }
+    ],
+    "name": "eventUpdateDistributorProductUints",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_manufacturerAddress",
+        "type": "address[]"
+      },
+      { "internalType": "uint256[]", "name": "_mdId", "type": "uint256[]" },
+      { "internalType": "bytes", "name": "_name", "type": "bytes" },
+      { "internalType": "bytes", "name": "_description", "type": "bytes" },
+      { "internalType": "uint128", "name": "_unit", "type": "uint128" },
+      { "internalType": "uint128", "name": "_price", "type": "uint128" },
+      { "internalType": "uint32", "name": "_date", "type": "uint32" },
+      { "internalType": "uint32", "name": "_expiryDate", "type": "uint32" }
+    ],
+    "name": "addDistributorProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_dpId", "type": "uint256" }
+    ],
+    "name": "deleteDistributorProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "distributorAddressToproductsIdMapping",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "distributorProductsIdToStructMapping",
+    "outputs": [
+      { "internalType": "bytes", "name": "dp_name", "type": "bytes" },
+      { "internalType": "bytes", "name": "dp_description", "type": "bytes" },
+      { "internalType": "uint128", "name": "dp_unit", "type": "uint128" },
+      { "internalType": "uint128", "name": "dp_price", "type": "uint128" },
+      { "internalType": "uint32", "name": "dp_date", "type": "uint32" },
+      { "internalType": "uint32", "name": "dp_expiryDate", "type": "uint32" },
+      { "internalType": "bool", "name": "dp_status", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_distributorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getAllProductsOfDistributor",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address[]",
+            "name": "manufacturerAddress",
+            "type": "address[]"
+          },
+          { "internalType": "uint256[]", "name": "md_id", "type": "uint256[]" },
+          { "internalType": "bytes", "name": "dp_name", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "dp_description",
+            "type": "bytes"
+          },
+          { "internalType": "uint128", "name": "dp_unit", "type": "uint128" },
+          { "internalType": "uint128", "name": "dp_price", "type": "uint128" },
+          { "internalType": "uint32", "name": "dp_date", "type": "uint32" },
+          {
+            "internalType": "uint32",
+            "name": "dp_expiryDate",
+            "type": "uint32"
+          },
+          { "internalType": "bool", "name": "dp_status", "type": "bool" }
+        ],
+        "internalType": "struct IDistributorProduct.distributorProduct[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDistributorProductIds",
+    "outputs": [
+      { "internalType": "uint256[]", "name": "", "type": "uint256[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_dpId", "type": "uint256" }
+    ],
+    "name": "getSingleDistributorProduct",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address[]",
+            "name": "manufacturerAddress",
+            "type": "address[]"
+          },
+          { "internalType": "uint256[]", "name": "md_id", "type": "uint256[]" },
+          { "internalType": "bytes", "name": "dp_name", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "dp_description",
+            "type": "bytes"
+          },
+          { "internalType": "uint128", "name": "dp_unit", "type": "uint128" },
+          { "internalType": "uint128", "name": "dp_price", "type": "uint128" },
+          { "internalType": "uint32", "name": "dp_date", "type": "uint32" },
+          {
+            "internalType": "uint32",
+            "name": "dp_expiryDate",
+            "type": "uint32"
+          },
+          { "internalType": "bool", "name": "dp_status", "type": "bool" }
+        ],
+        "internalType": "struct IDistributorProduct.distributorProduct",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_dpId", "type": "uint256" },
+      { "internalType": "uint128", "name": "_quantity", "type": "uint128" }
+    ],
+    "name": "updateDistributorProductUints",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

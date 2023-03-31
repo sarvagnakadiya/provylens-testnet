@@ -1,0 +1,23 @@
+{
+  "mumbai": {
+    "userDetails": {
+      "address": "0x345a54479E50ef9A0cAB015AF27A48142D40629f",
+      "startBlock": 33520682
+    },
+    "supplierProduct": {
+      "address": "0x3175bCC44B162941d38325005EBF867769Dec1A3"
+    },
+    "manufacturerProduct": {
+      "address": "0x8d0E34868684f8bc8244E7f4f5B2784dce342309"
+    },
+    "distributorProduct": {
+      "address": "0xb3169F83fdBDFf9b7affc76A3981B8e0049e5Bd9"
+    },
+    "supplierManufacturer": {
+      "address": "0xbc04AF6F9DC7D40fC63CF12c5e6Ed6dC0fE6eE4c"
+    },
+    "manufacturerDistributor": {
+      "address": "0x829D5780E6a31f2B7A9a7B44Cc45bd980baDB081"
+    }
+  }
+}

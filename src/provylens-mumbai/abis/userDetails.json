@@ -1,0 +1,295 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      }
+    ],
+    "name": "eventDeleteUser",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum IUserDetails.userType",
+        "name": "_type",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_name",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_physicalAddress",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "_image",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "_timeUpdated",
+        "type": "uint256"
+      }
+    ],
+    "name": "eventUserData",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum IUserDetails.userType",
+        "name": "_type",
+        "type": "uint8"
+      },
+      { "internalType": "bytes", "name": "_name", "type": "bytes" },
+      { "internalType": "bytes", "name": "_physicalAddress", "type": "bytes" },
+      { "internalType": "bytes", "name": "_image", "type": "bytes" }
+    ],
+    "name": "addUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deleteUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "distributors",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes", "name": "_image", "type": "bytes" }],
+    "name": "editImage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes", "name": "_name", "type": "bytes" }],
+    "name": "editName",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes", "name": "_physicalAddress", "type": "bytes" }
+    ],
+    "name": "editPhysicalAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllDistributors",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IUserDetails.userType",
+            "name": "userType",
+            "type": "uint8"
+          },
+          { "internalType": "bytes", "name": "userName", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "userPhysicalAddress",
+            "type": "bytes"
+          },
+          { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+          { "internalType": "bool", "name": "userStatus", "type": "bool" }
+        ],
+        "internalType": "struct IUserDetails.userDetails[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllManufacturers",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IUserDetails.userType",
+            "name": "userType",
+            "type": "uint8"
+          },
+          { "internalType": "bytes", "name": "userName", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "userPhysicalAddress",
+            "type": "bytes"
+          },
+          { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+          { "internalType": "bool", "name": "userStatus", "type": "bool" }
+        ],
+        "internalType": "struct IUserDetails.userDetails[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllSuppliers",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IUserDetails.userType",
+            "name": "userType",
+            "type": "uint8"
+          },
+          { "internalType": "bytes", "name": "userName", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "userPhysicalAddress",
+            "type": "bytes"
+          },
+          { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+          { "internalType": "bool", "name": "userStatus", "type": "bool" }
+        ],
+        "internalType": "struct IUserDetails.userDetails[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllUsers",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IUserDetails.userType",
+            "name": "userType",
+            "type": "uint8"
+          },
+          { "internalType": "bytes", "name": "userName", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "userPhysicalAddress",
+            "type": "bytes"
+          },
+          { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+          { "internalType": "bool", "name": "userStatus", "type": "bool" }
+        ],
+        "internalType": "struct IUserDetails.userDetails[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_address", "type": "address" }
+    ],
+    "name": "getSingleUser",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IUserDetails.userType",
+            "name": "userType",
+            "type": "uint8"
+          },
+          { "internalType": "bytes", "name": "userName", "type": "bytes" },
+          {
+            "internalType": "bytes",
+            "name": "userPhysicalAddress",
+            "type": "bytes"
+          },
+          { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+          { "internalType": "bool", "name": "userStatus", "type": "bool" }
+        ],
+        "internalType": "struct IUserDetails.userDetails",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "manufacturers",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "suppliers",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "userDetailsMapping",
+    "outputs": [
+      {
+        "internalType": "enum IUserDetails.userType",
+        "name": "userType",
+        "type": "uint8"
+      },
+      { "internalType": "bytes", "name": "userName", "type": "bytes" },
+      {
+        "internalType": "bytes",
+        "name": "userPhysicalAddress",
+        "type": "bytes"
+      },
+      { "internalType": "bytes", "name": "userImage", "type": "bytes" },
+      { "internalType": "bool", "name": "userStatus", "type": "bool" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "users",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_arrivalTime",
+        "type": "uint32"
+      }
+    ],
+    "name": "manufacturerDistributoreventArrivalTime",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_mdId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_mpId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_manufacturerAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_distributorAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_dispatchTime",
+        "type": "uint32"
+      }
+    ],
+    "name": "eventManufacturerDistributorTransfer",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "distributorTosmIdMapping",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_distributorAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getAllmdIdForDistributor",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "mpId", "type": "uint256" },
+          { "internalType": "address", "name": "m_address", "type": "address" },
+          { "internalType": "address", "name": "d_address", "type": "address" },
+          {
+            "internalType": "uint32",
+            "name": "dispatchTime",
+            "type": "uint32"
+          },
+          { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+        ],
+        "internalType": "struct IManufacturerDistributor.manufacturerDistributor[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_mdid", "type": "uint256" }
+    ],
+    "name": "getProduct",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "mpId", "type": "uint256" },
+          { "internalType": "address", "name": "m_address", "type": "address" },
+          { "internalType": "address", "name": "d_address", "type": "address" },
+          {
+            "internalType": "uint32",
+            "name": "dispatchTime",
+            "type": "uint32"
+          },
+          { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+        ],
+        "internalType": "struct IManufacturerDistributor.manufacturerDistributor",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "mdId",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "mdIdToStructMapping",
+    "outputs": [
+      { "internalType": "uint256", "name": "mpId", "type": "uint256" },
+      { "internalType": "address", "name": "m_address", "type": "address" },
+      { "internalType": "address", "name": "d_address", "type": "address" },
+      { "internalType": "uint32", "name": "dispatchTime", "type": "uint32" },
+      { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_mdId", "type": "uint256" }
+    ],
+    "name": "receiveProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_mpId", "type": "uint256" },
+      {
+        "internalType": "address",
+        "name": "_manufacturerAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_distributorAddress",
+        "type": "address"
+      },
+      { "internalType": "uint32", "name": "_dispatchTime", "type": "uint32" }
+    ],
+    "name": "transferproduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

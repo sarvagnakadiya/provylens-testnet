@@ -1,0 +1,191 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_arrivalTime",
+        "type": "uint32"
+      }
+    ],
+    "name": "eventArrivalTime",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_smId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "_spId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_supplierAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_manufacturerAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "_dispatchTime",
+        "type": "uint32"
+      }
+    ],
+    "name": "eventSupplierManufacturerTransfer",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_manufacturerAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getAllSmIdForManufacturer",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "spId", "type": "uint256" },
+          {
+            "internalType": "address",
+            "name": "supplierAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "manufacturerAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint32",
+            "name": "dispatchTime",
+            "type": "uint32"
+          },
+          { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+        ],
+        "internalType": "struct ISupplierManufacturer.supplierManufacturer[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_smId", "type": "uint256" }
+    ],
+    "name": "getProduct",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "uint256", "name": "spId", "type": "uint256" },
+          {
+            "internalType": "address",
+            "name": "supplierAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "manufacturerAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint32",
+            "name": "dispatchTime",
+            "type": "uint32"
+          },
+          { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+        ],
+        "internalType": "struct ISupplierManufacturer.supplierManufacturer",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "manufacturerTosmIdMapping",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_smId", "type": "uint256" }
+    ],
+    "name": "receiveProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "smId",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "smIdToStructMapping",
+    "outputs": [
+      { "internalType": "uint256", "name": "spId", "type": "uint256" },
+      {
+        "internalType": "address",
+        "name": "supplierAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "manufacturerAddress",
+        "type": "address"
+      },
+      { "internalType": "uint32", "name": "dispatchTime", "type": "uint32" },
+      { "internalType": "uint32", "name": "arrivalTime", "type": "uint32" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_spId", "type": "uint256" },
+      {
+        "internalType": "address",
+        "name": "_supplierAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_manufacturerAddress",
+        "type": "address"
+      },
+      { "internalType": "uint32", "name": "_dispatchTime", "type": "uint32" }
+    ],
+    "name": "transferProduct",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

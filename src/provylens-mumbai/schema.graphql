@@ -1,0 +1,169 @@
+type eventDeleteUser
+  @entity(immutable: true) { #2
+  id: Bytes!
+  _address: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventUserData
+  @entity(immutable: true) { #1
+  id: Bytes!
+  _address: Bytes! # address
+  _type: Int! # uint8
+  _name: Bytes! # bytes
+  _physicalAddress: Bytes! # bytes
+  _image: Bytes! # bytes
+  _timeUpdated: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type eventAddSupplierProduct
+  @entity(immutable: true) { #3
+  id: Bytes!
+  _spid: BigInt! # uint256
+  _address: Bytes! # address
+  _name: Bytes! # bytes
+  _description: Bytes! # bytes
+  _unit: BigInt! # uint128
+  _price: BigInt! # uint128
+  _date: BigInt! # uint32
+  _expiryDate: BigInt! # uint32
+  _timeAdded: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventDeleteSupplierProduct
+  @entity(immutable: true) { #4
+  id: Bytes!
+  _spId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventUpdateSupplierProductUints
+  @entity(immutable: true) { #5
+  id: Bytes!
+  _spId: BigInt! # uint256
+  _quantity: BigInt! # uint128
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type eventAddManufacturerProduct
+  @entity(immutable: true) { #6
+  id: Bytes!
+  _mpId: BigInt! # uint256
+  _supplierAddress: [Bytes!]! # address[]
+  _smId: [BigInt!]! # uint256[]
+  _name: Bytes! # bytes
+  _description: Bytes! # bytes
+  _unit: BigInt! # uint128
+  _price: BigInt! # uint128
+  _date: BigInt! # uint32
+  _expiryDate: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventDeleteManufacturerProduct
+  @entity(immutable: true) { #7
+  id: Bytes!
+  _mpId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventUpdateManufacturerProductUints
+  @entity(immutable: true) { #8
+  id: Bytes!
+  _dpId: BigInt! # uint256
+  _quantity: BigInt! # uint128
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type eventAddDistributorProduct
+  @entity(immutable: true) { #9
+  id: Bytes!
+  _dpId: BigInt! # uint256
+  _manufacturerAddress: [Bytes!]! # address[]
+  _mdId: [BigInt!]! # uint256[]
+  _name: Bytes! # bytes
+  _description: Bytes! # bytes
+  _unit: BigInt! # uint128
+  _price: BigInt! # uint128
+  _date: BigInt! # uint32
+  _expiryDate: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventDeleteDistributorProduct
+  @entity(immutable: true) { #10
+  id: Bytes!
+  _dpId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventUpdateDistributorProductUints
+  @entity(immutable: true) { #11
+  id: Bytes!
+  _dpId: BigInt! # uint256
+  _quantity: BigInt! # uint128
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type eventArrivalTime
+  @entity(immutable: true) { #15
+  id: Bytes!
+  _arrivalTime: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventSupplierManufacturerTransfer
+  @entity(immutable: true) { #12
+  id: Bytes!
+  _smId: BigInt! # uint256
+  _spId: BigInt! # uint256
+  _supplierAddress: Bytes! # address
+  _manufacturerAddress: Bytes! # address
+  _dispatchTime: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type manufacturerDistributoreventArrivalTime
+  @entity(immutable: true) { #13
+  id: Bytes!
+  _arrivalTime: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type eventManufacturerDistributorTransfer
+  @entity(immutable: true) { #14
+  id: Bytes!
+  _mdId: BigInt! # uint256
+  _mpId: BigInt! # uint256
+  _manufacturerAddress: Bytes! # address
+  _distributorAddress: Bytes! # address
+  _dispatchTime: BigInt! # uint32
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
